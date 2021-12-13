@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.IO;
 
-namespace Coursework_DB
+namespace CourseworkDB
 {
     public partial class Form1 : Form
     {
@@ -24,8 +24,17 @@ namespace Coursework_DB
         #region replica
         private void Replication()
         {
-            if(Directory.Exists(@".\DB_replica(16466)"))
-                Directory.Delete(@".\DB_replica(16466)", true);
+            if (Directory.Exists(@".\DB_replica(16466)"))
+            {
+                try
+                {
+                    Directory.Delete(@".\DB_replica(16466)", true);
+                }
+                catch
+                {
+
+                }
+            }
             Copy(@"C:\Program Files\PostgreSQL\12\data\base\16466", @".\DB_replica(16466)");
             Thread.Sleep(10_000);
         }

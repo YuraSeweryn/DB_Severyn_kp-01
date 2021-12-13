@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-#nullable disable
-
-namespace Coursework_DB
+namespace CourseworkDB
 {
-    public partial class Good
+    public partial class GoodsLog
     {
-        public Good()
-        {
-            Availabilities = new HashSet<Availability>();
-        }
-
-        public Good(int goodId, string name, string comment, int categoryId, string barcode)
+        public GoodsLog(int goodId, string name, string comment, int categoryId, string barcode)
         {
             GoodId = goodId;
             Name = name;
@@ -21,13 +15,14 @@ namespace Coursework_DB
             Barcode = barcode;
         }
 
+        public static implicit operator GoodsLog(Good d) => new GoodsLog(d.GoodId, d.Name, d.Comment, d.CategoryId, d.Barcode);
+
+        [Key]
+
         public int GoodId { get; set; }
         public string Name { get; set; }
         public string Comment { get; set; }
         public int CategoryId { get; set; }
         public string Barcode { get; set; }
-
-        public virtual Category Category { get; set; }
-        public virtual ICollection<Availability> Availabilities { get; set; }
     }
 }

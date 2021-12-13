@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Coursework_DB
+namespace CourseworkDB
 {
     public partial class Form_Prices : Form
     {
@@ -108,13 +108,13 @@ namespace Coursework_DB
             {
                 using (dbContext db = new dbContext())
                 {
-                    db.Prices.Remove(new Price
-                    {
+                    var t = new Price{
                         PriceId = (int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
                         Date = Convert.ToDateTime(dataGridView.Rows[dataGridView.Rows.Count - 2].Cells[1].Value),
                         Price1 = ((decimal)dataGridView.Rows[dataGridView.Rows.Count - 2].Cells[2].Value),
                         AvailableId = db.Availabilities.ToList().Find(c => c.AvailableId.ToString() == (string)dataGridView.Rows[dataGridView.Rows.Count - 2].Cells[3].Value).AvailableId
-                    });
+                        };db.PricesLogs.Add(t);
+                    db.Prices.Remove(t);
                     db.SaveChanges();
                 }
                 GetData();

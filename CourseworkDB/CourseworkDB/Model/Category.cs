@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-
-namespace Coursework_DB
+namespace CourseworkDB
 {
     public partial class Category
     {
@@ -17,6 +17,7 @@ namespace Coursework_DB
             Name = name;
         }
 
+        [Key]
         public int CategoryId { get; set; }
         public string Name { get; set; }
 

@@ -23,7 +23,6 @@ C:\Users\Yurii\source\DB\Coursework_DB\Coursework_DB\bin\Debug\netcoreapp3.1\Npg
 C:\Users\Yurii\source\DB\Coursework_DB\Coursework_DB\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\Yurii\source\DB\Coursework_DB\Coursework_DB\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\Yurii\source\DB\Coursework_DB\Coursework_DB\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Yurii\source\DB\Coursework_DB\Coursework_DB\bin\Debug\netcoreapp3.1\System.Windows.Forms.DataVisualization.dll
 C:\Users\Yurii\source\DB\Coursework_DB\Coursework_DB\obj\Debug\netcoreapp3.1\Coursework_DB.csproj.AssemblyReference.cache
 C:\Users\Yurii\source\DB\Coursework_DB\Coursework_DB\obj\Debug\netcoreapp3.1\Coursework_DB.Form_Availabilities.resources
 C:\Users\Yurii\source\DB\Coursework_DB\Coursework_DB\obj\Debug\netcoreapp3.1\Coursework_DB.Form_Categories.resources

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Coursework_DB
+namespace CourseworkDB
 {
     static class Program
     {

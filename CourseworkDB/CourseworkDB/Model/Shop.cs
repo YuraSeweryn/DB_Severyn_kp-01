@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace Coursework_DB
+namespace CourseworkDB
 {
     public partial class Shop
     {

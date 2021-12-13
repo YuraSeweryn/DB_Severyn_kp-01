@@ -73,10 +73,10 @@ C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\bin\Debug\System.ValueTuple.x
 C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.csproj.CopyComplete
 C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.exe
 C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.pdb
-C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\Coursework_DB.Form_Availabilities.resources
-C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\Coursework_DB.Form_Categories.resources
-C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\Coursework_DB.Form_Goods.resources
-C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\Coursework_DB.Form1.resources
-C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\Coursework_DB.Form_Prices.resources
-C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\Coursework_DB.Form_Shops.resources
-C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\Coursework_DB.Form_Visualisation.resources
+C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Availabilities.resources
+C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Categories.resources
+C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Goods.resources
+C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form1.resources
+C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Prices.resources
+C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Shops.resources
+C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Visualisation.resources

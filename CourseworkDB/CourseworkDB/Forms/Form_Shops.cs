@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Coursework_DB
+namespace CourseworkDB
 {
     public partial class Form_Shops : Form
     {
@@ -93,10 +93,11 @@ namespace Coursework_DB
             {
                 using (dbContext db = new dbContext())
                 {
-                    db.Shops.Remove(new Shop((int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
+                    var t = new Shop((int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
                         (string)dataGridView.Rows[e.RowIndex].Cells[1].Value,
                         (string)dataGridView.Rows[e.RowIndex].Cells[2].Value,
-                        Convert.ToDecimal((string)dataGridView.Rows[e.RowIndex].Cells[3].Value)));
+                        Convert.ToDecimal((string)dataGridView.Rows[e.RowIndex].Cells[3].Value));db.ShopsLogs.Add(t);
+                    db.Shops.Remove(t);
                     db.SaveChanges();
                 }
                 GetData();

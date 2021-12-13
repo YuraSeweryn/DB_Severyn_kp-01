@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Coursework_DB
+namespace CourseworkDB
 {
     public partial class Form_Availabilities : Form
     {
@@ -112,13 +112,12 @@ namespace Coursework_DB
             {
                 using (dbContext db = new dbContext())
                 {
-                    db.Availabilities.Remove(new Availability
-                    {
-                        AvailableId = (int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
+                    var t = new Availability
+                    {AvailableId = (int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
                         Amount = Convert.ToInt32((string)dataGridView.Rows[e.RowIndex].Cells[1].Value),
                         GoodId = db.Goods.ToList().Find(c => c.Name == (string)dataGridView.Rows[e.RowIndex].Cells[2].Value).GoodId,
-                        ShopId = db.Shops.ToList().Find(c => c.Name == (string)dataGridView.Rows[e.RowIndex].Cells[3].Value).ShopId
-                    });
+                        ShopId = db.Shops.ToList().Find(c => c.Name == (string)dataGridView.Rows[e.RowIndex].Cells[3].Value).ShopId};db.AvailabilityLogs.Add(t);
+                    db.Availabilities.Remove(t);
                     db.SaveChanges();
                 }
                 GetData();

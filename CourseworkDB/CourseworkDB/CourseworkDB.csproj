@@ -281,7 +281,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dbContext.cs" />
+    <Compile Include="Model\AvailabilityLog.cs" />
     <Compile Include="Forms\Form_Availabilities.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,9 +325,14 @@
       <DependentUpon>Form_Visualisation.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Availability.cs" />
+    <Compile Include="Model\CategoriesLog1.cs" />
     <Compile Include="Model\Category.cs" />
+    <Compile Include="dbContext.cs" />
     <Compile Include="Model\Good.cs" />
+    <Compile Include="Model\GoodsLog.cs" />
     <Compile Include="Model\Price.cs" />
+    <Compile Include="Model\PricesLog.cs" />
+    <Compile Include="Model\ShopsLog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Shop.cs" />

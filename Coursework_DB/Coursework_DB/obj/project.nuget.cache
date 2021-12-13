@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VQ32cJqZXRiESwdttV7XJ4gItCuqecM0iRR6G91n/YhfgenbF9Eu5jK/ZV69If/q6EGW8WswUaBdg2mLvn+jLQ==",
+  "dgSpecHash": "K5A6ZmNdHS7GIauqKIdQCNMPfujQPGbdneLqjbYLXYnvdCkp3SnTucZLyKkSRHU6RjvuFcDL7L6MCHMe3rkGMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yurii\\source\\DB\\Coursework_DB\\Coursework_DB\\Coursework_DB.csproj",
   "expectedPackageFiles": [
@@ -26,8 +26,7 @@
     "C:\\Users\\Yurii\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Yurii\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Yurii\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "C:\\Users\\Yurii\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
-    "C:\\Users\\Yurii\\.nuget\\packages\\system.windows.forms.datavisualization\\1.0.0-prerelease.20110.1\\system.windows.forms.datavisualization.1.0.0-prerelease.20110.1.nupkg.sha512"
+    "C:\\Users\\Yurii\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }

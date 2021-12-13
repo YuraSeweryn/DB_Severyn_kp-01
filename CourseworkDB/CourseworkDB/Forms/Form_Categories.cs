@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Coursework_DB
+namespace CourseworkDB
 {
     public partial class Form_Categories : Form
     {
@@ -84,7 +84,8 @@ namespace Coursework_DB
             {
                 using (dbContext db = new dbContext())
                 {
-                    db.Categories.Remove(new Category((int)dataGridView.Rows[e.RowIndex].Cells[0].Value, (string)dataGridView.Rows[e.RowIndex].Cells[1].Value));
+                    var t = new Category((int)dataGridView.Rows[e.RowIndex].Cells[0].Value, (string)dataGridView.Rows[e.RowIndex].Cells[1].Value); db.CategoriesLogs1.Add(t);
+                    db.Categories.Remove(t); 
                     db.SaveChanges();
                 }
                 GetData();

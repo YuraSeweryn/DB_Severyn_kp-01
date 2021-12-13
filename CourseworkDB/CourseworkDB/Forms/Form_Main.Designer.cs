@@ -1,5 +1,5 @@
 ﻿
-namespace Coursework_DB
+namespace CourseworkDB
 {
     partial class Form1
     {

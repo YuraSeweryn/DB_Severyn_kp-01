@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Coursework_DB
+namespace CourseworkDB
 {
     public partial class Form_Goods : Form
     {
@@ -104,11 +104,12 @@ namespace Coursework_DB
             {
                 using (dbContext db = new dbContext())
                 {
-                    db.Goods.Remove(new Good((int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
+                    var t = new Good((int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
                         (string)dataGridView.Rows[e.RowIndex].Cells[1].Value,
                         (string)dataGridView.Rows[e.RowIndex].Cells[2].Value,
                         db.Categories.ToList().Find(c => c.Name == (string)dataGridView.Rows[e.RowIndex].Cells[3].Value).CategoryId,
-                        (string)dataGridView.Rows[e.RowIndex].Cells[4].Value));
+                        (string)dataGridView.Rows[e.RowIndex].Cells[4].Value);db.GoodsLogs.Add(t);
+                    db.Goods.Remove(t);
                     db.SaveChanges();
                 }
                 GetData();

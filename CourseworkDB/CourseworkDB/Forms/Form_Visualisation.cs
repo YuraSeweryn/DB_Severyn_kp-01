@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace Coursework_DB
+namespace CourseworkDB
 {
     public partial class Form_Visualisation : Form
     {

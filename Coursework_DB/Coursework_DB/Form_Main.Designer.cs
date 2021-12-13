@@ -147,6 +147,7 @@ namespace Coursework_DB
             this.Controls.Add(this.buttonClearData);
             this.Name = "Form1";
             this.Text = "CourseWork";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxEntities.ResumeLayout(false);
             this.ResumeLayout(false);
 

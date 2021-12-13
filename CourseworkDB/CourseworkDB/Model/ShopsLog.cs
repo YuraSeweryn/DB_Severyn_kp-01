@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-#nullable disable
-
-namespace Coursework_DB
+namespace CourseworkDB
 {
-    public partial class Shop
+    public partial class ShopsLog
     {
-        public Shop()
-        {
-            Availabilities = new HashSet<Availability>();
-        }
-
-        public Shop(int shopId, string name, string adress, decimal rating)
+        public ShopsLog(int shopId, string name, string adress, decimal rating)
         {
             ShopId = shopId;
             Name = name;
@@ -20,11 +14,12 @@ namespace Coursework_DB
             Rating = rating;
         }
 
+        public static implicit operator ShopsLog(Shop d) => new ShopsLog(d.ShopId, d.Name, d.Adress, d.Rating);
+
+        [Key]
         public int ShopId { get; set; }
         public string Name { get; set; }
         public string Adress { get; set; }
         public decimal Rating { get; set; }
-
-        public virtual ICollection<Availability> Availabilities { get; set; }
     }
 }
