@@ -38,15 +38,16 @@ namespace CourseworkDB
             this.button_Availability = new System.Windows.Forms.Button();
             this.groupBoxEntities = new System.Windows.Forms.GroupBox();
             this.buttonVilualisation = new System.Windows.Forms.Button();
+            this.button_Analysis = new System.Windows.Forms.Button();
             this.groupBoxEntities.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonClearData
             // 
-            this.buttonClearData.Location = new System.Drawing.Point(688, 11);
+            this.buttonClearData.Location = new System.Drawing.Point(681, 11);
             this.buttonClearData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClearData.Name = "buttonClearData";
-            this.buttonClearData.Size = new System.Drawing.Size(100, 29);
+            this.buttonClearData.Size = new System.Drawing.Size(107, 29);
             this.buttonClearData.TabIndex = 0;
             this.buttonClearData.Text = "Clear Data";
             this.buttonClearData.UseVisualStyleBackColor = true;
@@ -54,10 +55,10 @@ namespace CourseworkDB
             // 
             // button_Random
             // 
-            this.button_Random.Location = new System.Drawing.Point(688, 44);
+            this.button_Random.Location = new System.Drawing.Point(681, 44);
             this.button_Random.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Random.Name = "button_Random";
-            this.button_Random.Size = new System.Drawing.Size(100, 56);
+            this.button_Random.Size = new System.Drawing.Size(107, 56);
             this.button_Random.TabIndex = 1;
             this.button_Random.Text = "Random Fill";
             this.button_Random.UseVisualStyleBackColor = true;
@@ -137,20 +138,31 @@ namespace CourseworkDB
             // 
             // buttonVilualisation
             // 
-            this.buttonVilualisation.Location = new System.Drawing.Point(688, 104);
+            this.buttonVilualisation.Location = new System.Drawing.Point(681, 104);
             this.buttonVilualisation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonVilualisation.Name = "buttonVilualisation";
-            this.buttonVilualisation.Size = new System.Drawing.Size(100, 29);
+            this.buttonVilualisation.Size = new System.Drawing.Size(107, 29);
             this.buttonVilualisation.TabIndex = 8;
             this.buttonVilualisation.Text = "Visualisation";
             this.buttonVilualisation.UseVisualStyleBackColor = true;
             this.buttonVilualisation.Click += new System.EventHandler(this.buttonVilualisation_Click);
+            // 
+            // button_Analysis
+            // 
+            this.button_Analysis.Location = new System.Drawing.Point(681, 138);
+            this.button_Analysis.Name = "button_Analysis";
+            this.button_Analysis.Size = new System.Drawing.Size(107, 29);
+            this.button_Analysis.TabIndex = 9;
+            this.button_Analysis.Text = "Data Analysis";
+            this.button_Analysis.UseVisualStyleBackColor = true;
+            this.button_Analysis.Click += new System.EventHandler(this.button_Analysis_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 360);
+            this.Controls.Add(this.button_Analysis);
             this.Controls.Add(this.buttonVilualisation);
             this.Controls.Add(this.groupBoxEntities);
             this.Controls.Add(this.button_Random);
@@ -174,6 +186,7 @@ namespace CourseworkDB
         private System.Windows.Forms.Button button_Availability;
         private System.Windows.Forms.GroupBox groupBoxEntities;
         private System.Windows.Forms.Button buttonVilualisation;
+        private System.Windows.Forms.Button button_Analysis;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -104,12 +105,18 @@ namespace CourseworkDB
             {
                 using (dbContext db = new dbContext())
                 {
-                    var t = new Good((int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
+                    var temp = new Good((int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
                         (string)dataGridView.Rows[e.RowIndex].Cells[1].Value,
                         (string)dataGridView.Rows[e.RowIndex].Cells[2].Value,
                         db.Categories.ToList().Find(c => c.Name == (string)dataGridView.Rows[e.RowIndex].Cells[3].Value).CategoryId,
-                        (string)dataGridView.Rows[e.RowIndex].Cells[4].Value);db.GoodsLogs.Add(t);
-                    db.Goods.Remove(t);
+                        (string)dataGridView.Rows[e.RowIndex].Cells[4].Value);db.GoodsLogs.Add(temp);
+
+                    var goodID = temp.GoodId;
+                    db.Prices.RemoveRange(db.Prices.Include(t => t.Available).Where(t => t.Available.GoodId == goodID));
+                    db.Availabilities.RemoveRange(db.Availabilities.Where(t => t.GoodId == goodID));
+                    db.Goods.Remove(temp);
+
+
                     db.SaveChanges();
                 }
                 GetData();

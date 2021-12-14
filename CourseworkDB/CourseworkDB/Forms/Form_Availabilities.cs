@@ -112,12 +112,16 @@ namespace CourseworkDB
             {
                 using (dbContext db = new dbContext())
                 {
-                    var t = new Availability
+                    var temp = new Availability
                     {AvailableId = (int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
                         Amount = Convert.ToInt32((string)dataGridView.Rows[e.RowIndex].Cells[1].Value),
                         GoodId = db.Goods.ToList().Find(c => c.Name == (string)dataGridView.Rows[e.RowIndex].Cells[2].Value).GoodId,
-                        ShopId = db.Shops.ToList().Find(c => c.Name == (string)dataGridView.Rows[e.RowIndex].Cells[3].Value).ShopId};db.AvailabilityLogs.Add(t);
-                    db.Availabilities.Remove(t);
+                        ShopId = db.Shops.ToList().Find(c => c.Name == (string)dataGridView.Rows[e.RowIndex].Cells[3].Value).ShopId};db.AvailabilityLogs.Add(temp);
+
+                    var availableID = temp.AvailableId;
+                    db.Prices.RemoveRange(db.Prices.Where(t => t.AvailableId == availableID));
+                    db.Availabilities.Remove(temp);
+
                     db.SaveChanges();
                 }
                 GetData();

@@ -114,6 +114,7 @@ namespace CourseworkDB
                         Price1 = ((decimal)dataGridView.Rows[dataGridView.Rows.Count - 2].Cells[2].Value),
                         AvailableId = db.Availabilities.ToList().Find(c => c.AvailableId.ToString() == (string)dataGridView.Rows[dataGridView.Rows.Count - 2].Cells[3].Value).AvailableId
                         };db.PricesLogs.Add(t);
+
                     db.Prices.Remove(t);
                     db.SaveChanges();
                 }

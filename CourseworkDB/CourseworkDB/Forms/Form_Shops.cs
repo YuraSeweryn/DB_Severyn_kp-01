@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -93,11 +94,16 @@ namespace CourseworkDB
             {
                 using (dbContext db = new dbContext())
                 {
-                    var t = new Shop((int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
+                    var temp = new Shop((int)dataGridView.Rows[e.RowIndex].Cells[0].Value,
                         (string)dataGridView.Rows[e.RowIndex].Cells[1].Value,
                         (string)dataGridView.Rows[e.RowIndex].Cells[2].Value,
-                        Convert.ToDecimal((string)dataGridView.Rows[e.RowIndex].Cells[3].Value));db.ShopsLogs.Add(t);
-                    db.Shops.Remove(t);
+                        Convert.ToDecimal((string)dataGridView.Rows[e.RowIndex].Cells[3].Value));db.ShopsLogs.Add(temp);
+
+                    var shopID = temp.ShopId;
+                    db.Prices.RemoveRange(db.Prices.Include(t => t.Available).Where(t => t.Available.ShopId == shopID));
+                    db.Availabilities.RemoveRange(db.Availabilities.Where(t => t.ShopId == shopID));
+                    db.Shops.Remove(temp);
+
                     db.SaveChanges();
                 }
                 GetData();

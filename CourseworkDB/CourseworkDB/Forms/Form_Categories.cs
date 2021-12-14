@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -75,7 +76,6 @@ namespace CourseworkDB
                     }
                 }
             }
-
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,8 +84,14 @@ namespace CourseworkDB
             {
                 using (dbContext db = new dbContext())
                 {
-                    var t = new Category((int)dataGridView.Rows[e.RowIndex].Cells[0].Value, (string)dataGridView.Rows[e.RowIndex].Cells[1].Value); db.CategoriesLogs1.Add(t);
-                    db.Categories.Remove(t); 
+                    var temp = new Category((int)dataGridView.Rows[e.RowIndex].Cells[0].Value, (string)dataGridView.Rows[e.RowIndex].Cells[1].Value); db.CategoriesLogs1.Add(temp);
+
+                    var categoryID = temp.CategoryId;
+                    db.Prices.RemoveRange(db.Prices.Include(t => t.Available.Good).Where(t => t.Available.Good.CategoryId == categoryID));
+                    db.Availabilities.RemoveRange(db.Availabilities.Include(t => t.Good).Where(t=> t.Good.CategoryId == categoryID));
+                    db.Goods.RemoveRange(db.Goods.Where(t => t.CategoryId == categoryID));
+                    db.Categories.Remove(temp);
+
                     db.SaveChanges();
                 }
                 GetData();

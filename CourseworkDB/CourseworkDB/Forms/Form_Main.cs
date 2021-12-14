@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-using System.Threading;
 using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace CourseworkDB
 {
@@ -19,23 +20,30 @@ namespace CourseworkDB
             {
                 db.SaveChanges();
             }
+
+
+            Form_Categories f = new Form_Categories();
+            f.Show();
+            f.Close();
         }
 
         #region replica
         private void Replication()
         {
-            if (Directory.Exists(@".\DB_replica(16466)"))
+            try
             {
-                try
+
+                if (Directory.Exists(@".\DB_replica(16466)"))
                 {
                     Directory.Delete(@".\DB_replica(16466)", true);
                 }
-                catch
-                {
-
-                }
+                Copy(@"C:\Program Files\PostgreSQL\12\data\base\16466", @".\DB_replica(16466)");
             }
-            Copy(@"C:\Program Files\PostgreSQL\12\data\base\16466", @".\DB_replica(16466)");
+            catch
+            {
+
+            }
+
             Thread.Sleep(10_000);
         }
 
@@ -73,12 +81,21 @@ namespace CourseworkDB
             {
                 using (dbContext db = new dbContext())
                 {
+
                     db.RemoveRange(db.Prices);
                     db.RemoveRange(db.Availabilities);
                     db.RemoveRange(db.Goods);
                     db.RemoveRange(db.Shops);
                     db.RemoveRange(db.Categories);
+
+                    db.Database.ExecuteSqlRaw("ALTER SEQUENCE prices_price_id_seq RESTART WITH 1;");
+                    db.Database.ExecuteSqlRaw("ALTER SEQUENCE availability_available_id_seq RESTART WITH 1;");
+                    db.Database.ExecuteSqlRaw("ALTER SEQUENCE goods_good_id_seq RESTART WITH 1;");
+                    db.Database.ExecuteSqlRaw("ALTER SEQUENCE categories_category_id_seq RESTART WITH 1;");
                     db.SaveChanges();
+
+                    db.SaveChanges();
+
                 }
                 MessageBox.Show("Database cleared", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -188,6 +205,13 @@ namespace CourseworkDB
             f.Show();
         }
 
+        private void button_Analysis_Click(object sender, EventArgs e)
+        {
+            Form_Analys f = new Form_Analys();
+            f.Show();
+        }
+
         #endregion
+
     }
 }

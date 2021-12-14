@@ -80,3 +80,4 @@ C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form1.
 C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Prices.resources
 C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Shops.resources
 C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Visualisation.resources
+C:\Users\Yurii\source\DB\CourseworkDB\CourseworkDB\obj\Debug\CourseworkDB.Form_Analys.resources

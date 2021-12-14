@@ -216,7 +216,7 @@ namespace CourseworkDB
                 //entity.HasIndex(e => e.ShopId, "shops_shop_id_idx");
 
                 entity.Property(e => e.ShopId)
-                    .HasColumnName("shop_id")
+                    .HasColumnName("shopid")
                     .UseIdentityAlwaysColumn();
 
                 entity.Property(e => e.Adress)
