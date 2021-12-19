@@ -281,59 +281,59 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form_Analys.cs">
+    <Compile Include="View-Controller\Form_Analys.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Analys.Designer.cs">
+    <Compile Include="View-Controller\Form_Analys.Designer.cs">
       <DependentUpon>Form_Analys.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\AvailabilityLog.cs" />
-    <Compile Include="Forms\Form_Availabilities.cs">
+    <Compile Include="View-Controller\Form_Availabilities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Availabilities.Designer.cs">
+    <Compile Include="View-Controller\Form_Availabilities.Designer.cs">
       <DependentUpon>Form_Availabilities.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Categories.cs">
+    <Compile Include="View-Controller\Form_Categories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Categories.Designer.cs">
+    <Compile Include="View-Controller\Form_Categories.Designer.cs">
       <DependentUpon>Form_Categories.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Goods.cs">
+    <Compile Include="View-Controller\Form_Goods.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Goods.Designer.cs">
+    <Compile Include="View-Controller\Form_Goods.Designer.cs">
       <DependentUpon>Form_Goods.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Main.cs">
+    <Compile Include="View-Controller\Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Main.Designer.cs">
+    <Compile Include="View-Controller\Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Prices.cs">
+    <Compile Include="View-Controller\Form_Prices.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Prices.Designer.cs">
+    <Compile Include="View-Controller\Form_Prices.Designer.cs">
       <DependentUpon>Form_Prices.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Shops.cs">
+    <Compile Include="View-Controller\Form_Shops.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Shops.Designer.cs">
+    <Compile Include="View-Controller\Form_Shops.Designer.cs">
       <DependentUpon>Form_Shops.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Visualisation.cs">
+    <Compile Include="View-Controller\Form_Visualisation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Visualisation.Designer.cs">
+    <Compile Include="View-Controller\Form_Visualisation.Designer.cs">
       <DependentUpon>Form_Visualisation.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Availability.cs" />
     <Compile Include="Model\CategoriesLog1.cs" />
     <Compile Include="Model\Category.cs" />
-    <Compile Include="dbContext.cs" />
+    <Compile Include="Model\dbContext.cs" />
     <Compile Include="Model\Good.cs" />
     <Compile Include="Model\GoodsLog.cs" />
     <Compile Include="Model\Price.cs" />
@@ -342,28 +342,28 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Shop.cs" />
-    <EmbeddedResource Include="Forms\Form_Availabilities.resx">
+    <EmbeddedResource Include="View-Controller\Form_Availabilities.resx">
       <DependentUpon>Form_Availabilities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Categories.resx">
+    <EmbeddedResource Include="View-Controller\Form_Categories.resx">
       <DependentUpon>Form_Categories.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Goods.resx">
+    <EmbeddedResource Include="View-Controller\Form_Goods.resx">
       <DependentUpon>Form_Goods.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Main.resx">
+    <EmbeddedResource Include="View-Controller\Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Prices.resx">
+    <EmbeddedResource Include="View-Controller\Form_Prices.resx">
       <DependentUpon>Form_Prices.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Shops.resx">
+    <EmbeddedResource Include="View-Controller\Form_Shops.resx">
       <DependentUpon>Form_Shops.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Visualisation.resx">
+    <EmbeddedResource Include="View-Controller\Form_Visualisation.resx">
       <DependentUpon>Form_Visualisation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Analys.resx">
+    <EmbeddedResource Include="View-Controller\Form_Analys.resx">
       <DependentUpon>Form_Analys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
